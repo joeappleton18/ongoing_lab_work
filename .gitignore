@@ -21,3 +21,8 @@ node_modules/
 # IDE-specific
 *.vscode/
 .idea
+
+
+# Django specific
+server/venv/
+server/db.sqlite3
