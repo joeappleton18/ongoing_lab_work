@@ -1,0 +1,23 @@
+# Python-specific
+*.pyc
+*.pyo
+__pycache__/
+.pytest_cache/
+
+# C/C++
+*.o
+*.a
+*.so
+*.elf
+.libs/
+
+# Java
+*.class
+*.jar
+
+# Node.js
+node_modules/
+
+# IDE-specific
+*.vscode/
+.idea
