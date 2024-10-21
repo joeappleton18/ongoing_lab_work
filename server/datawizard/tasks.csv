@@ -1,0 +1,5 @@
+task_no,list_id,title,description,priority,story_points
+1,1,Write frontend,,LOW,50
+2,1,Add authentication,,HIGH,15
+3,2,Implement model,,HIGH,15
+4,2,Check functionality with client,"Need to check with the client about the new favourite functionality, call scheduled for Monday",MEDIUM,10

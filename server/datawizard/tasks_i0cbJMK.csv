@@ -1,0 +1,25 @@
+task_no,list_id,title,description,priority,story_points
+1,1,Write frontend,,LOW,50
+2,1,Add authentication,,HIGH,15
+3,2,Implement model,,HIGH,15
+4,2,Check functionality with client,"Need to check with the client about the new favourite functionality, call scheduled for Monday",MEDIUM,10
+5,3,Design database schema,Create an initial schema for the project's database,HIGH,20
+6,3,Set up database,Install and configure the database for development,MEDIUM,10
+7,4,Write API documentation,Document all API endpoints for internal and external use,HIGH,15
+8,4,Optimize database queries,Improve query performance and reduce response time,HIGH,25
+9,5,Create test cases for frontend,Write unit and integration tests for the frontend components,MEDIUM,12
+10,5,Conduct usability testing,Arrange a session with users to gather feedback on usability,LOW,18
+11,6,Integrate payment gateway,Implement payment processing using Stripe API,HIGH,20
+12,6,Review payment flow with client,Meet with the client to confirm payment flow and error handling,MEDIUM,8
+13,7,Configure CI/CD pipeline,Set up continuous integration and deployment pipelines,HIGH,15
+14,7,Automate testing in pipeline,Add automated test scripts to run during each build in the pipeline,HIGH,12
+15,8,Prepare launch plan,Create a detailed launch plan with timelines and deliverables,HIGH,30
+16,8,Notify stakeholders of launch,Draft and send communications about the launch to stakeholders,MEDIUM,10
+17,9,Address security vulnerabilities,Review and resolve any security vulnerabilities identified,HIGH,18
+18,9,Perform security audit,Conduct a full security audit of the system,HIGH,25
+19,10,Create marketing materials,Develop promotional materials for product launch,MEDIUM,15
+20,10,Finalize product branding,Decide on final branding elements such as logo and color scheme,LOW,10
+21,11,Deploy to production,Perform the final production deployment,HIGH,35
+22,11,Monitor post-launch issues,Set up monitoring and address any post-launch issues,HIGH,20
+23,12,Conduct post-launch review,Gather feedback and create a report on the post-launch performance,MEDIUM,10
+24,12,Plan for future features,Brainstorm and outline features for future releases,LOW,8

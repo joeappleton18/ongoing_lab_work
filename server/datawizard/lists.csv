@@ -1,0 +1,5 @@
+list_id,board_id,title,position
+1,1,To do,2
+2,1,Doing,3
+3,1,Done,4
+4,1,Backlog,1
