@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import generics, viewsets
+from rest_framework.response import Response
 
-from .models import Board, Project, Task
-from .serializers import BoardSerializer, ProjectSerializer, TaskSerializer
+from .models import Board, List, Project, Task
+from .serializers import (BoardSerializer, ListSerializer, ProjectSerializer,
+                          TaskSerializer)
 
 # Create your views here.
 
@@ -26,6 +28,20 @@ class BoardViewSet(viewsets.ModelViewSet):
 class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
-    
+
     def get_queryset(self):
         return Task.objects.filter(board=self.kwargs["board_id"])
+
+
+class BoardListsView(generics.RetrieveAPIView):
+    queryset = Board.objects.all()
+    serializer_class = ListSerializer
+
+    def get(self, request, *args, **kwargs):
+        board = self.get_object()
+        lists = List.objects.filter(board=board).prefetch_related(
+            'task_set', 'task_set__labels')
+
+        print(lists)
+        serializer = ListSerializer(lists, many=True)
+        return Response(serializer.data)
