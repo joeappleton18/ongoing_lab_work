@@ -39,9 +39,7 @@ class BoardListsView(generics.RetrieveAPIView):
 
     def get(self, request, *args, **kwargs):
         board = self.get_object()
-        lists = List.objects.filter(board=board).prefetch_related(
-            'task_set', 'task_set__labels')
-
+        lists = List.objects.filter(board=board)
         print(lists)
         serializer = ListSerializer(lists, many=True)
         return Response(serializer.data)

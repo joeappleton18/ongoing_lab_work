@@ -71,7 +71,8 @@ class Task(models.Model):
     # know how to create your own
     task_no = models.AutoField(primary_key=True)
 
-    list = models.ForeignKey(List, on_delete=models.CASCADE)
+    list = models.ForeignKey(
+        List, on_delete=models.CASCADE, related_name='tasks')
     title = models.CharField(max_length=64)
     description = models.TextField(max_length=512, blank=True, null=True)
     priority = models.CharField(max_length=1, choices=Priority)
@@ -89,7 +90,8 @@ class Label(models.Model):
     title = models.CharField(max_length=32)
     colour = models.CharField(max_length=7, validators=[
                               RegexValidator('#[0-9A-F]{6}')])
-    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    project = models.ForeignKey(
+        Project, on_delete=models.CASCADE, related_name='labels')
 
     def __str__(self):
         return self.title
