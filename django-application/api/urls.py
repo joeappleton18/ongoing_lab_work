@@ -12,5 +12,7 @@ router.register(r'projects/(?P<project_id>\d+)/boards/(?P<board_id>\d+)/tasks',
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('boards/<int:pk>/lists/', BoardListsView.as_view(), name='board-lists'),
+    path('projects/<int:project_pk>/boards/<int:board_pk>/lists/', 
+     BoardListsView.as_view(), 
+     name='board-lists'),
 ]

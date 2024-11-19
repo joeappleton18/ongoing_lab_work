@@ -38,8 +38,19 @@ class BoardListsView(generics.RetrieveAPIView):
     serializer_class = ListSerializer
 
     def get(self, request, *args, **kwargs):
-        board = self.get_object()
+        project_pk = self.kwargs.get('project_pk')
+        board_pk = self.kwargs.get('board_pk')
+
+        # Retrieve the board and optionally validate project association
+        try:
+            board = Board.objects.get(pk=board_pk, project_id=project_pk)
+        except Board.DoesNotExist:
+            return Response(
+                {"detail": "Board not found for this project."},
+                status=status.HTTP_404_NOT_FOUND
+            )
+
+        # Retrieve lists associated with the board
         lists = List.objects.filter(board=board)
-        print(lists)
         serializer = ListSerializer(lists, many=True)
         return Response(serializer.data)
