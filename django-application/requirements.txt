@@ -5,8 +5,10 @@ click==8.1.7
 data-wizard==2.0.0
 Django==5.1.2
 django-cors-headers==4.5.0
+django-seed==0.3.1
 djangorestframework==3.15.2
 et-xmlfile==1.1.0
+Faker==33.0.0
 html-json-forms==1.1.1
 idna==3.10
 itertable==2.2.0
@@ -17,4 +19,6 @@ python-dateutil==2.9.0.post0
 requests==2.32.3
 six==1.16.0
 sqlparse==0.5.1
+toposort==1.10
+typing_extensions==4.12.2
 urllib3==2.2.3

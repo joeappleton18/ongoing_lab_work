@@ -1,6 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
 
-const NotFound = () => {
+function NotFound() {
 	return (
 		<Container fluid className="vh-100 d-flex justify-content-center align-items-center">
 			<Row>
@@ -12,6 +12,6 @@ const NotFound = () => {
 			</Row>
 		</Container>
 	);
-};
+}
 
 export default NotFound;
