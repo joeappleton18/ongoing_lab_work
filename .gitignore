@@ -4,16 +4,9 @@
 __pycache__/
 .pytest_cache/
 
-# C/C++
-*.o
-*.a
-*.so
-*.elf
-.libs/
+# Mac Specific 
+ .DS_Store
 
-# Java
-*.class
-*.jar
 
 # Node.js
 node_modules/
@@ -24,5 +17,5 @@ node_modules/
 
 
 # Django specific
-server/venv/
-server/db.sqlite3
+django-application/venv/
+django-application/db.sqlite3
