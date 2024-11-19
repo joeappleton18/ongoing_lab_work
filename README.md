@@ -1,6 +1,3 @@
-# LAB 10 Starter Code 
+# LAB 10 Starter Code
 
-After cloning this repository, you should do the following to get started:
-
-
-
+After cloning this repository, look at the README.md in each of the subdirectories to see how to get started.
